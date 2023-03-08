@@ -1,0 +1,77 @@
+.main{
+    display: flex;
+    background-color: $green;
+    &-img{
+        padding-left: 5px;
+    }
+    &-text{
+        color: $cream;
+        p{
+            padding: 140px 120px 76px 120px;
+            font-size: 64px;
+            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+        }
+    }
+    .butt{
+        position: relative;
+        padding: 0 120px;
+        &-text{
+            position: relative;
+            top: -28px;
+            left: 40px;
+            color: $cream;
+        }
+    }
+}
+.review{
+    background-color: $cream;
+    display: flex;
+    &-text{
+        color: $green;
+        padding: 160px 80px;
+        .txt1{
+            padding-top: 10px;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+        .txt2{
+            padding-top: 10px;
+            text-transform: capitalize;
+            font-size: 64px;
+        }
+        .txt3{
+            padding-top: 10px;
+            font-weight: 500;
+        }
+   }
+   &-img{
+    padding-top: 120px;
+   } 
+}
+
+.hiring{
+    background-image: url(/img/home/bg.png);
+    background-size: cover;
+    text-align: center;
+    height: 700px;
+    &-text{
+        padding-top: 200px;
+        font-size: 64px;
+        text-transform: uppercase;
+        padding-bottom: 50px;
+    }
+}
+button{
+    width: 200px;
+    padding: 20px 0px;
+    border-radius: 25px;
+    background-color: $green;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    color: $cream;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+}

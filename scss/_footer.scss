@@ -1,0 +1,12 @@
+.foot{
+    display: flex;
+    background-color: $green;
+    justify-content: space-between;
+    img{
+        padding: 40px 80px;
+    }
+    p{
+        padding: 60px 80px;
+        color: gray;
+    }
+}  

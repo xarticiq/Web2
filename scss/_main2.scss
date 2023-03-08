@@ -1,0 +1,41 @@
+.main2{
+    &-img{
+        height: 700px;
+        size: 100%;
+        background-image: url(/img/main2/bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        h1{
+            text-transform: uppercase;
+            padding-top: 300px;
+            vertical-align: middle;
+            display: inline-block;
+            font-size: 128px;
+            text-shadow: 1px 1px 1px #000;
+        }
+    }
+}
+
+.drink{
+    background-color: #1A1A19;
+    display: flex;
+    &-img{
+        padding: 140px 68px;
+    }
+    &-text{
+        padding: 280px 0;
+        color: $cream;
+        p{
+            padding-top: 20px;
+        }
+    }
+}
+
+.green{
+    color: $green;
+}
+
+.cream{
+    color: $cream;
+}

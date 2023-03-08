@@ -1,0 +1,40 @@
+@import "globals";
+
+.head{
+    &-container{
+        background-color: $green;
+        display: flex;
+        justify-content: space-between;
+        a{
+            padding: 0;
+        }
+    }
+}
+
+.logo{
+    padding: 40px 80px;
+    a{
+        position: relative;
+        color: $cream;
+    }
+}
+
+.logo-r{
+    padding: 40px 80px;
+    a{
+        position: relative;
+        top: -22px;
+        left: 16px;
+        color: $cream;
+        font-weight:bold;
+    }
+}
+
+.navigation{
+    padding: 60px 0;
+    a{
+        color: $cream;
+        padding: 60px 20px;
+        font-weight: 700;
+    }
+}
