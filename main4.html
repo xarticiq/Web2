@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/styles.css">
+    <title>Form</title>
+</head>
+<body>
+    <header class="head">
+        <div class="head-container">
+            <div class="logo">
+                <a href="#"><img src="/img/Kalijaga.png"></a>
+            </div>
+            <div class="navigation">
+                <a href="main5.html">Home</a>
+                <a href="main2.html">Best Seller</a>
+                <a href="main3.html">About Us</a>
+                <a href="main4.html">Apply Here</a>
+            </div>
+            <div class="logo-r">
+                <img src="/img/leaf.png">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+    </header>
+    <div class="order-bg">
+        <div class="order">
+            <div class="title">Form</div>
+            <div class="sub-title">
+                <p>
+                    - - -
+                </p>
+            </div>
+            <div class="content">
+                <form action="">
+                    <div class="user-details">
+                        <p>Your Info</p>
+                        <p>-------------------------------------------------------------------</p>
+                        <div class="input-box">
+                            <span class="details">First Name</span>
+                            <input type="text" id = "name"placeholder="Enter your first name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Last Name</span>
+                            <input type="text" id = "name2" placeholder="Enter your last name" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="details">E-mail</span>
+                            <input type="email" id = "email"placeholder="Enter your email" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="details">Whatsapp Number</span>
+                            <input type="tel" id = "numb2" placeholder="0800 0000 0000" maxlength="11"  title="12 digits code" required>
+                        </div>
+                        <p>Additional Info</p>
+                        <p>-------------------------------------------------------------------</p>
+                        <div class="checkbox-sq">
+                            <p>Interested In Applying As?</p>                         
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="checkbox1" name="checkbox1" value="app">
+                                    <span for="checkbox1">Barista</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="checkbox2" name="checkbox2" value="web">
+                                    <span for="checkbox2">Waiter/waitress</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="checkbox3" name="checkbox3" value="logo">
+                                    <span for="checkbox3">Kitchen Staff</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="price-details">
+                            <p>Past Experience</p>
+                            <div class="price">
+                                <label>
+                                    <input type="radio" name="radio" id="radio1" value="<3 years">
+                                    <span class="price" for="radio1"><3 years</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="radio" id="radio2" value=">3 years">
+                                    <span class="price" for="radio2">>3 years</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="radio" id="radio3" value="Zero Working Experience">
+                                    <span class="price" for="radio3">Zero Working Experience</span>
+                                </label>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="order-details">
+                        <div class="order-input">
+                            <p>Tell me about yourself</p>
+                            <textarea placeholder="You can talk about your previous work experience." id="message" name="message"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', (event)=>{
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const name2 = document.getElementById('name2').value;
+        const numb2 = document.getElementById('numb2').value;
+        const email = document.getElementById('email').value;
+        const checkbox1 = document.getElementById('checkbox1').checked;
+        const checkbox2 = document.getElementById('checkbox2').checked;
+        const checkbox3 = document.getElementById('checkbox3').checked;
+        const radio = document.querySelector('input[name="radio"]:checked').value;
+        const message = document.getElementById('message').value;       
+        
+        sessionStorage.setItem('formData', JSON.stringify({
+          name: name,
+          name2: name2,
+          numb2 : numb2,
+          email: email,
+          checkbox1: checkbox1,
+          checkbox2: checkbox2,
+          checkbox3: checkbox3,
+          radio: radio,
+          message: message
+        }));
+
+            window.location.href = 'data.html';
+        })
+    </script>
+</body>
+</html>

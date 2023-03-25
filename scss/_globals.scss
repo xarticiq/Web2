@@ -1,10 +1,11 @@
 $green : #41523C;
 $cream : #EDF1D6;
+$dark : #0000007a;
 
 
 html {
-    overflow: hidden;
-    font-size: 24px;
+    overflow: scroll;
+    font-size: 20px;
     box-sizing: border-box;
 }
 
@@ -17,6 +18,10 @@ html {
 a{
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
+    &:hover{
+        font-size: larger;
+        transition: 500ms ease-in-out;
+    }
 }
 
 p{
@@ -29,4 +34,9 @@ h1{
 
 .flex{
     display: flex;
+}
+
+.dark{
+    color: $dark;
+    text-shadow: black;
 }

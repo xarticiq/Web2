@@ -7,7 +7,6 @@
 }
 
 .content p{
-    text-align: center;
     font-size: 20px;
     font-weight: bold;
     color: $green;
@@ -161,13 +160,13 @@ form .input-box span.details{
     font-size: 16px;
     border-radius: 5px;
     padding-left: 15px;
-    border: 1px solid rgb(207, 202, 255);
+    border: 1px solid $green;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
-    border-color:#1D2B52;
+    border-color: rgb(123, 167, 123);
 }
 textarea{
     outline: none;
@@ -179,7 +178,7 @@ textarea{
     font-family: inherit;
     font-size: 16px;
     padding: 15px 0px 0 15px;
-    border: 1px solid rgb(207, 202, 255);
+    border: 1px solid $green;
     border-bottom-width: 2px;
     transition: all 0.5s ease;
 }
@@ -228,12 +227,12 @@ form .order-details .order-input p.details{
 	cursor: pointer;
 }
 
-form .button{
+form .button button{
     text-align: center;
     height: 45px;
     margin: 35px 0;
 }
-form .button input{
+form .button button{
     height: 100%;
     width: 100%;
     border-radius: 5px;
@@ -250,4 +249,12 @@ form .button input{
 h1{
     font-size: 24px;
     font-family: 'Nunito', sans-serif;
+}
+
+.cv{
+    font-size: 20px;
+    font-weight: bold;
+    color: $green;
+    // text-indent: 10px;
+    padding-bottom: 20px;
 }

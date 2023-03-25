@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/styles.css">
+    <title>Data</title>
+</head>
+<header class="head">
+  <div class="head-container">
+    <div class="logo-r">
+      <img src="img/home/back.png">
+      <a href="main4.html">Back</a>
+  </div>
+      <div class="logo">
+          <a href="#"><img src="/img/Kalijaga.png"></a>
+      </div>
+  </div>
+</header>
+<body>
+  <h1 class="main-text title">Data From Form</h1>
+    <table class="center">
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+
+      </tr>
+
+      <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td><span id="name"></span>&nbsp;<span id="name2"></span></td>
+      </tr>
+
+      <tr>
+        <td>E-mail</td>
+        <td>:</td>
+        <td><span id="email"></span></td>
+      </tr>
+
+      <tr>
+        <td>
+          Phone Number
+        </td>
+        <td>:</td>
+        <td>
+          <span id="numb2"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Applied as
+        </td>
+        <td>
+          :<br>
+          :<br>
+          :<br>
+        </td>
+        <td>
+          <p>
+            <span id="checkbox1"></span> Barista <br>
+            <span id="checkbox2"></span> Waiter/Waitress <br>
+            <span id="checkbox3"></span> Kitchen Staff <br>
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Radio
+        </td>
+        <td>:</td>
+        <td>
+          <span id="radio"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>About</td>
+        <td>:</td>
+        <td><span id="message"></span></td>
+      </tr>
+    </table>
+
+  <script>
+    // Ambil data dari session storage dan konversi ke objek
+    const formData = JSON.parse(sessionStorage.getItem('formData'));
+
+    // Tampilkan data pada halaman
+      document.getElementById('name').textContent = formData.name;
+      document.getElementById('name2').textContent = formData.name2;
+      document.getElementById('email').textContent = formData.email;
+      document.getElementById('numb2').textContent = formData.numb2;
+      document.getElementById('checkbox1').textContent = formData.checkbox1 ? '✓' : '✗';
+      document.getElementById('checkbox2').textContent = formData.checkbox2 ? '✓' : '✗';
+      document.getElementById('checkbox3').textContent = formData.checkbox3 ? '✓' : '✗';
+      document.getElementById('radio').textContent = formData.radio;
+      document.getElementById('message').textContent = formData.message;
+  </script>
+</body>
+</html>
